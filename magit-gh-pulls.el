@@ -452,6 +452,8 @@
   "Unconditionally turn on `magit-pulls-mode'."
   (magit-gh-pulls-mode 1))
 
+"Test"
+
 (provide 'magit-gh-pulls)
 ;; Local Variables:
 ;; indent-tabs-mode: nil
