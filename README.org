@@ -17,6 +17,18 @@
 (add-hook 'magit-mode-hook 'turn-on-magit-gh-pulls)
    #+END_SRC
 
+***** Private repository configuration
+
+      Currently, ~magit-gh-pulls~ tries to fetch everything using the
+      ~git://~ protocol.  This doesn't work for private repositories.  A
+      workaround for this is to use git URL rewrite rule:
+
+      #+BEGIN_EXAMPLE
+      $ git config url.git@github.com:.insteadOf git://github.com/
+      #+END_EXAMPLE
+
+      A proper fix for this is being tracked in #58.
+
 ** Usage
 
 ***** Existing Pull Requests
